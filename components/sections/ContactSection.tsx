@@ -26,23 +26,22 @@ export default function ContactSection() {
       id="contact"
       className="relative isolate overflow-hidden border-t border-white/10 bg-[#070b14]"
     >
-      {/* Full section 3D background */}
-      <div className="pointer-events-none absolute inset-0 z-0 opacity-20">
+      {/* 3D Animated Background */}
+      <div className="pointer-events-none absolute inset-0 z-0 opacity-35">
         <Contact3D />
       </div>
 
-      {/* Cinematic dark overlay */}
-      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[#070b14]/65 via-[#070b14]/55 to-[#070b14]/95" />
+      {/* Dark Overlay */}
+      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[#070b14]/35 via-[#070b14]/40 to-[#070b14]/80" />
 
-      {/* Ambient glow */}
+      {/* Ambient Glow */}
       <div className="pointer-events-none absolute left-1/2 top-20 z-10 h-96 w-96 -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[130px]" />
 
-      {/* Foreground content */}
+      {/* Main Content */}
       <div className="relative z-20 mx-auto max-w-6xl px-6 py-28">
 
-        {/* Main heading */}
+        {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
-
           <p className="font-mono text-sm uppercase tracking-[0.4em] text-cyan-400">
             CONTACT / CONNECT
           </p>
@@ -60,9 +59,9 @@ export default function ContactSection() {
             Let&apos;s connect and build something reliable together.
           </p>
 
-          {/* Phone number - prominent */}
+          {/* Phone Number */}
           <div className="mt-10">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-gray-400">
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-gray-300">
               CALL ME DIRECTLY
             </p>
 
@@ -76,9 +75,8 @@ export default function ContactSection() {
             <div className="mx-auto mt-4 h-px w-32 bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
           </div>
 
-          {/* Contact buttons */}
+          {/* Social Buttons */}
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-
             <a
               href="mailto:kdiggi73@gmail.com"
               className="rounded-lg bg-cyan-400 px-7 py-3.5 font-semibold text-black transition hover:bg-cyan-300"
@@ -104,45 +102,73 @@ export default function ContactSection() {
               GitHub ↗
             </a>
           </div>
-
         </div>
 
-        {/* Contact details */}
-        <div className="mx-auto mt-24 grid max-w-4xl gap-4 border-y border-white/10 py-8 sm:grid-cols-3">
+        {/* Email, Location, Availability Cards */}
+        <div className="mx-auto mt-24 grid max-w-5xl gap-5 sm:grid-cols-3">
 
-          <div className="text-center">
-            <p className="font-mono text-xs uppercase tracking-widest text-gray-500">
-              Email
+          {/* Email */}
+          <a
+            href="mailto:kdiggi73@gmail.com"
+            className="group rounded-2xl border border-cyan-400/20 bg-[#101c2d]/90 p-7 text-center shadow-[0_0_25px_rgba(34,211,238,0.04)] backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_0_30px_rgba(34,211,238,0.12)]"
+          >
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-2xl text-cyan-400 transition group-hover:bg-cyan-400/20">
+              ✉
+            </div>
+
+            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">
+              Email Address
             </p>
-            <a
-              href="mailto:kdiggi73@gmail.com"
-              className="mt-3 inline-block text-sm text-gray-200 transition hover:text-cyan-400"
-            >
-              kdiggi73@gmail.com
-            </a>
-          </div>
 
-          <div className="text-center">
-            <p className="font-mono text-xs uppercase tracking-widest text-gray-500">
+            <h3 className="mt-3 break-all text-base font-semibold text-white">
+              kdiggi73@gmail.com
+            </h3>
+
+            <p className="mt-3 text-xs text-gray-400">
+              Drop me an email →
+            </p>
+          </a>
+
+          {/* Location */}
+          <div className="group rounded-2xl border border-cyan-400/20 bg-[#101c2d]/90 p-7 text-center shadow-[0_0_25px_rgba(34,211,238,0.04)] backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_0_30px_rgba(34,211,238,0.12)]">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-2xl text-cyan-400 transition group-hover:bg-cyan-400/20">
+              ⌖
+            </div>
+
+            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">
               Location
             </p>
-            <p className="mt-3 text-sm text-gray-200">
+
+            <h3 className="mt-3 text-base font-semibold text-white">
               Bengaluru, India
+            </h3>
+
+            <p className="mt-3 text-xs text-gray-400">
+              Based in Bengaluru
             </p>
           </div>
 
-          <div className="text-center">
-            <p className="font-mono text-xs uppercase tracking-widest text-gray-500">
+          {/* Availability */}
+          <div className="group rounded-2xl border border-green-400/20 bg-[#101c2d]/90 p-7 text-center shadow-[0_0_25px_rgba(74,222,128,0.04)] backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-green-400/50 hover:shadow-[0_0_30px_rgba(74,222,128,0.10)]">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-green-400/20 bg-green-400/10 transition group-hover:bg-green-400/20">
+              <span className="h-3 w-3 rounded-full bg-green-400 shadow-[0_0_15px_#4ade80]" />
+            </div>
+
+            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.25em] text-green-400">
               Availability
             </p>
-            <p className="mt-3 text-sm text-green-400">
-              ● Open to opportunities
+
+            <h3 className="mt-3 text-base font-semibold text-white">
+              Open to Opportunities
+            </h3>
+
+            <p className="mt-3 text-xs text-gray-400">
+              Let&apos;s work together
             </p>
           </div>
-
         </div>
 
-        {/* Message form */}
+        {/* Contact Form */}
         <div className="mx-auto mt-24 max-w-2xl">
 
           <div className="mb-10 text-center">
@@ -161,15 +187,14 @@ export default function ContactSection() {
 
           <form
             onSubmit={handleSubmit}
-            className="space-y-5 rounded-2xl border border-white/10 bg-[#0b1220]/80 p-6 backdrop-blur-xl sm:p-8"
+            className="space-y-5 rounded-2xl border border-white/10 bg-[#0b1220]/90 p-6 backdrop-blur-xl sm:p-8"
           >
-
             <input
               name="name"
               type="text"
               placeholder="Your Name"
               required
-              className="w-full rounded-lg border border-white/10 bg-[#080b12]/80 px-4 py-4 text-white outline-none transition placeholder:text-gray-500 focus:border-cyan-400"
+              className="w-full rounded-lg border border-white/10 bg-[#080b12] px-4 py-4 text-white outline-none transition placeholder:text-gray-500 focus:border-cyan-400"
             />
 
             <input
@@ -177,7 +202,7 @@ export default function ContactSection() {
               type="email"
               placeholder="Your Email Address"
               required
-              className="w-full rounded-lg border border-white/10 bg-[#080b12]/80 px-4 py-4 text-white outline-none transition placeholder:text-gray-500 focus:border-cyan-400"
+              className="w-full rounded-lg border border-white/10 bg-[#080b12] px-4 py-4 text-white outline-none transition placeholder:text-gray-500 focus:border-cyan-400"
             />
 
             <input
@@ -185,7 +210,7 @@ export default function ContactSection() {
               type="text"
               placeholder="Subject"
               required
-              className="w-full rounded-lg border border-white/10 bg-[#080b12]/80 px-4 py-4 text-white outline-none transition placeholder:text-gray-500 focus:border-cyan-400"
+              className="w-full rounded-lg border border-white/10 bg-[#080b12] px-4 py-4 text-white outline-none transition placeholder:text-gray-500 focus:border-cyan-400"
             />
 
             <textarea
@@ -193,7 +218,7 @@ export default function ContactSection() {
               rows={5}
               placeholder="Write your message..."
               required
-              className="w-full resize-none rounded-lg border border-white/10 bg-[#080b12]/80 px-4 py-4 text-white outline-none transition placeholder:text-gray-500 focus:border-cyan-400"
+              className="w-full resize-none rounded-lg border border-white/10 bg-[#080b12] px-4 py-4 text-white outline-none transition placeholder:text-gray-500 focus:border-cyan-400"
             />
 
             <button
@@ -206,10 +231,8 @@ export default function ContactSection() {
             <p className="text-center text-xs text-gray-500">
               Opens your default email application.
             </p>
-
           </form>
         </div>
-
       </div>
     </section>
   );
